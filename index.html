@@ -1,1 +1,107 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{color:black}
+    </style>
+</head>
+<body style="margin: 0%;">
+<header style="background-color:teal;">
+    <nav style="display: flex;justify-content: space-around; width: 100%; align-content: center; align-items: center; margin-bottom:0%;padding: 15px 0px;">
+        <a href="#About_me">About me</a>
+        <a href="#Contact">Contact</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Code_fragments">Code fragments</a>
+    </nav>
+</header>
+<main style="background: linear-gradient(teal, 10%, pink, teal);">
+    <div style="display:flex;flex-wrap: nowrap; margin-bottom: 0%; ">
+    <div style="display: flex; align-content:center; justify-content: center; width:50%; flex-direction: column; text-align: center;">
+        <h1>My CV</h1>
+        <h2 id="About_me">About me</h2>
+        <p>Hello. My name is Khutsaidze Lizaveta. I am a student of the Belarusian-Russian University and I study in the specialty "Automated Information Processing System". I have no work experience.</p>
+    </div>
+    <div style="display:flex; justify-content: center; width: 50%; align-content:center;">
+        <img src="./kot-mem-1-1.webp" height="280" width="200" alt="Khutsaidze Lizaveta">
+    </div>
+    </div>
+    <div style="display:flex;flex-wrap: nowrap; margin-bottom: 2%;">
+        <div style="display: flex; align-content:center; justify-content: center; width:50%; flex-direction: column; align-items:center;">
+        <h2 id="Experience">Experience</h2>
+        <ol>
+            <li>
+                <a href="https://stepik.org/course/63054/syllabus">Interactive SQL Simulator</a>
+            </li>
+            <li>
+                <a href="https://stepik.org/course/551/syllabus">Introduction to databases</a>
+            </li>
+            <li>
+                <a href="https://stepik.org/course/99426/promo">The C# programming language for beginners</a>
+            </li>
+        </ol>
+    </div>
+    <div style="display:flex; justify-content: center; width: 50%; align-content:center; flex-direction: column; align-items:center;">
+        <h2 id="Skills">Skills</h2>
+        <ul>
+            <li>C#</li>
+            <li>MS Access, SQL, MS SQL Server, Enterprise Architect</li>
+            <li>GitHub</li>
+            <li>HTML, CSS</li>
+            <li>English level: A2</li>
+        </ul>
+    </div>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%; align-content:center; flex-direction: column; align-items: center;">
+        <h2 id="Code_fragments">Code fragments</h2>
+        <pre><code>        public static void FillInfAboutMachines(Machine [] machines)
+            {
+                for(int i = 0; i = machines.Length; i++)
+                {
+                    Write($"Введите имя станка {i + 1}: ");
+                    machines[i].name = ReadLine();
+    
+                    Write($"Введите время простоя станка {machines[i].name} в месяц: ");
+                    machines[i].downtimePerMonth = double.Parse(ReadLine());
+    
+                    Write($"Введите время работы станка {machines[i].name} в месяц: ");
+                    machines[i].workingTimePerMonth = double.Parse(ReadLine());
+                    WriteLine();
+                }
+            }
+            public static void Downtime(Machine [] machines)
+            {
+                for(int i = 0; i = machines.Length; i++)
+                {
+                    WriteLine($"Время простоя {i+1} станка: {machines[i].downtimePerMonth}");
+                }
+    
+            }
+            public static void MachinesWithoutDowntime(Machine [] machines, ref int count)
+            {
+                for(int i = 0; i = machines.Length; i++)
+                {
+                    if (machines[i].downtimePerMonth == 0)
+                    {
+                        count++;
+                        WriteLine($"Станок {machines[i].name} не имеет простоя");
+                    }
+                }
+            }</code></pre>
+    </div>
+</main>
+<footer id="Contact" style="display: flex; width: 100%; align-items:center;justify-content: center; background-color:teal;">
+<nav style="display: flex; align-items:center; justify-content: space-around; width: 100%;">
+    <a style="width: 10%;height: 100px;" href="https://rs.school/courses/javascript-ru"><img src="./rs-school-logo.svg"  alt="rs-school-logo"></a>
+    <a href="https://github.com/keannieaux">GitHub</a>
+    <p>Phone: +375333518145</p>
+    <p>Email: keannieaux@gmail.com</p>
+    <a href="https://t.me/keannieaux">Telegram</a>
+    <p>2024</p>
+</nav>
+</footer>
+</body>
+</html>
